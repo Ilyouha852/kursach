@@ -77,12 +77,16 @@ public class AppointmentController {
     }
 
     public List<Appointment> getAppointmentsByDoctorAndPeriod(int doctorId, Date startDate, Date endDate) {
-        return appointmentRepository.getAppointmentsByDoctorAndPeriod(doctorId, startDate, endDate);
+        return appointmentRepository.getAppointmentsByDoctorAndPeriod(
+            doctorId, 
+            new java.sql.Date(startDate.getTime()),
+            new java.sql.Date(endDate.getTime())
+        );
     }
 
     public void updateAppointments(List<Appointment> appointments) {
         for (Appointment appointment : appointments) {
-            appointmentRepository.updateAppointment(appointment);
+            appointmentRepository.update(appointment);
         }
     }
 }
