@@ -9,19 +9,20 @@ public class MedicalRecord {
     private String diagnosis;
     private String proceduresPerformed;
     private String notes;
-    private int patientId; // Foreign key to Patient
+    private int patientId;
+    private int doctorId;
 
     public MedicalRecord() {}
 
-    public MedicalRecord(Date recordDate, String diagnosis, String proceduresPerformed, String notes, int patientId) {
+    public MedicalRecord(Date recordDate, String diagnosis, String proceduresPerformed, String notes, int patientId, int doctorId) {
         this.recordDate = recordDate;
         this.diagnosis = diagnosis;
         this.proceduresPerformed = proceduresPerformed;
         this.notes = notes;
         this.patientId = patientId;
+        this.doctorId = doctorId;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }
@@ -70,6 +71,14 @@ public class MedicalRecord {
         this.patientId = patientId;
     }
 
+    public int getDoctorId() {
+        return doctorId;
+    }
+
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
+    }
+
     @Override
     public String toString() {
         return "MedicalRecord{" +
@@ -79,6 +88,7 @@ public class MedicalRecord {
                 ", proceduresPerformed='" + proceduresPerformed + '\'' +
                 ", notes='" + notes + '\'' +
                 ", patientId=" + patientId +
+                ", doctorId=" + doctorId +
                 '}';
     }
 }

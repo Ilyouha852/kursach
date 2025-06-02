@@ -69,13 +69,15 @@ public class MedicalRecordPanel extends JPanel {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         for (MedicalRecord record : medicalRecords) {
             medicalRecordListArea.append(record.getId() + ": " + dateFormat.format(record.getRecordDate()) +
-                    ", Patient ID: " + record.getPatientId() + ", Диагноз: " + record.getDiagnosis() + "\n");
+                    ", Patient ID: " + record.getPatientId() + 
+                    ", Doctor ID: " + record.getDoctorId() + 
+                    ", Диагноз: " + record.getDiagnosis() + "\n");
         }
     }
 
     private void addMedicalRecord() {
         JDialog addDialog = new JDialog((JFrame) SwingUtilities.getWindowAncestor(this), "Добавить медицинскую запись", true);
-        addDialog.setLayout(new GridLayout(6, 2));
+        addDialog.setLayout(new GridLayout(7, 2));
 
         JLabel recordDateLabel = new JLabel("Дата записи (yyyy-MM-dd):");
         JTextField recordDateField = new JTextField();
@@ -85,9 +87,11 @@ public class MedicalRecordPanel extends JPanel {
         JTextField proceduresPerformedField = new JTextField();
         JLabel notesLabel = new JLabel("Заметки:");
         JTextArea notesArea = new JTextArea();
-        JScrollPane notesScrollPane = new JScrollPane(notesArea);  // Added scroll pane
+        JScrollPane notesScrollPane = new JScrollPane(notesArea);
         JLabel patientIdLabel = new JLabel("ID пациента:");
         JTextField patientIdField = new JTextField();
+        JLabel doctorIdLabel = new JLabel("ID врача:");
+        JTextField doctorIdField = new JTextField();
 
         JButton saveButton = new JButton("Сохранить");
         JButton cancelButton = new JButton("Отмена");
@@ -102,6 +106,8 @@ public class MedicalRecordPanel extends JPanel {
         addDialog.add(notesScrollPane);
         addDialog.add(patientIdLabel);
         addDialog.add(patientIdField);
+        addDialog.add(doctorIdLabel);
+        addDialog.add(doctorIdField);
         addDialog.add(saveButton);
         addDialog.add(cancelButton);
 
@@ -127,8 +133,9 @@ public class MedicalRecordPanel extends JPanel {
 
                     try {
                         newMedicalRecord.setPatientId(Integer.parseInt(patientIdField.getText()));
+                        newMedicalRecord.setDoctorId(Integer.parseInt(doctorIdField.getText()));
                     } catch (NumberFormatException ex) {
-                        JOptionPane.showMessageDialog(addDialog, "Неверный формат ID пациента", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(addDialog, "Неверный формат ID пациента или врача", "Ошибка", JOptionPane.ERROR_MESSAGE);
                         return;
                     }
 
@@ -169,7 +176,7 @@ public class MedicalRecordPanel extends JPanel {
             }
 
             JDialog editDialog = new JDialog((JFrame) SwingUtilities.getWindowAncestor(this), "Редактировать медицинскую запись", true);
-            editDialog.setLayout(new GridLayout(6, 2));
+            editDialog.setLayout(new GridLayout(7, 2));
 
             JLabel recordDateLabel = new JLabel("Дата записи (yyyy-MM-dd):");
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -180,9 +187,11 @@ public class MedicalRecordPanel extends JPanel {
             JTextField proceduresPerformedField = new JTextField(medicalRecordToEdit.getProceduresPerformed());
             JLabel notesLabel = new JLabel("Заметки:");
             JTextArea notesArea = new JTextArea(medicalRecordToEdit.getNotes());
-             JScrollPane notesScrollPane = new JScrollPane(notesArea);  // Added scroll pane
+            JScrollPane notesScrollPane = new JScrollPane(notesArea);
             JLabel patientIdLabel = new JLabel("ID пациента:");
             JTextField patientIdField = new JTextField(String.valueOf(medicalRecordToEdit.getPatientId()));
+            JLabel doctorIdLabel = new JLabel("ID врача:");
+            JTextField doctorIdField = new JTextField(String.valueOf(medicalRecordToEdit.getDoctorId()));
 
             JButton saveButton = new JButton("Сохранить");
             JButton cancelButton = new JButton("Отмена");
@@ -197,6 +206,8 @@ public class MedicalRecordPanel extends JPanel {
             editDialog.add(notesScrollPane);
             editDialog.add(patientIdLabel);
             editDialog.add(patientIdField);
+            editDialog.add(doctorIdLabel);
+            editDialog.add(doctorIdField);
             editDialog.add(saveButton);
             editDialog.add(cancelButton);
 
@@ -218,8 +229,9 @@ public class MedicalRecordPanel extends JPanel {
 
                         try {
                             medicalRecordToEdit.setPatientId(Integer.parseInt(patientIdField.getText()));
+                            medicalRecordToEdit.setDoctorId(Integer.parseInt(doctorIdField.getText()));
                         } catch (NumberFormatException ex) {
-                            JOptionPane.showMessageDialog(editDialog, "Неверный формат ID пациента", "Ошибка", JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(editDialog, "Неверный формат ID пациента или врача", "Ошибка", JOptionPane.ERROR_MESSAGE);
                             return;
                         }
 
