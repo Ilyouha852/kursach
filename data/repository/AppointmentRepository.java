@@ -1,7 +1,7 @@
 package data.repository;
 
 import data.db.PostgreSQLDatabase;
-import model.Appointment;
+import model.entities.Appointment;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -36,20 +36,10 @@ public class AppointmentRepository {
         } catch (SQLException e) {
             System.err.println("Error retrieving appointments: " + e.getMessage());
             e.printStackTrace();
-            // Убираем попытку переподключения здесь
-            // if (e.getMessage().contains("connection") || e.getMessage().contains("closed")) {
-            //     try {
-            //         PostgreSQLDatabase.getInstance().getConnection();
-            //     } catch (SQLException ex) {
-            //         System.err.println("Failed to reconnect: " + ex.getMessage());
-            //     }
-            // }
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (resultSet != null) resultSet.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -88,11 +78,9 @@ public class AppointmentRepository {
             System.err.println("Error finding appointment by id: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (resultSet != null) resultSet.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -133,11 +121,9 @@ public class AppointmentRepository {
             System.err.println("Error saving appointment: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (generatedKeys != null) generatedKeys.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -167,10 +153,8 @@ public class AppointmentRepository {
             System.err.println("Error updating appointment: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();

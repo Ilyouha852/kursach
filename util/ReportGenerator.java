@@ -3,9 +3,9 @@ package util;
 import controller.AppointmentController;
 import controller.DoctorController;
 import controller.PatientController;
-import model.Appointment;
-import model.Doctor;
-import model.Patient;
+import model.entities.Appointment;
+import model.entities.Doctor;
+import model.entities.Patient;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -1,11 +1,12 @@
-package ui;
+package ui.dialogs;
 
 import javax.swing.*;
+
+import model.entities.DentalSpecialty;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import model.DentalSpecialty;
 
 public class AddDiseaseDialog extends JDialog {
     private JTextField diseaseNameField;
@@ -17,7 +18,7 @@ public class AddDiseaseDialog extends JDialog {
         super(parent, "Добавить новое заболевание", true);
         setLayout(new BorderLayout());
 
-        // Создаем панель с полями ввода
+        // Панель с полями ввода
         JPanel inputPanel = new JPanel(new GridLayout(2, 2, 5, 5));
         inputPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
@@ -40,7 +41,7 @@ public class AddDiseaseDialog extends JDialog {
         inputPanel.add(specializationLabel);
         inputPanel.add(specializationCombo);
 
-        // Создаем панель с кнопками
+        // Панель с кнопками
         JPanel buttonPanel = new JPanel();
         JButton saveButton = new JButton("Сохранить");
         JButton cancelButton = new JButton("Отмена");
@@ -48,7 +49,7 @@ public class AddDiseaseDialog extends JDialog {
         buttonPanel.add(saveButton);
         buttonPanel.add(cancelButton);
 
-        // Добавляем обработчики событий
+        // Обработчики событий
         saveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,7 +70,7 @@ public class AddDiseaseDialog extends JDialog {
             }
         });
 
-        // Добавляем панели в диалог
+        // Панели в диалог
         add(inputPanel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
 

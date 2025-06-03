@@ -1,4 +1,4 @@
-package model;
+package model.entities;
 
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -36,7 +36,6 @@ public class Patient {
         this.hereditaryDiseases = hereditaryDiseases;
     }
 
-    // Getters and setters for all fields
     public int getId() {
         return id;
     }
@@ -101,7 +100,6 @@ public class Patient {
         this.disease = disease;
     }
 
-    // New getters and setters for medical history
     public String getChronicDiseases() {
         return chronicDiseases;
     }
@@ -134,7 +132,6 @@ public class Patient {
         this.hereditaryDiseases = hereditaryDiseases;
     }
 
-    // Method for getting full medical history
     public String getMedicalHistory() {
         StringBuilder history = new StringBuilder();
         if (chronicDiseases != null && !chronicDiseases.isEmpty()) {

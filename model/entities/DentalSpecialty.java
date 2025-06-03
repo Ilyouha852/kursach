@@ -1,4 +1,4 @@
-package model;
+package model.entities;
 
 public class DentalSpecialty {
     // Константы специализаций
@@ -22,13 +22,6 @@ public class DentalSpecialty {
     public static final String ENAMEL_HYPOPLASIA = "Гипоплазия эмали";
     public static final String TOOTH_SENSITIVITY = "Повышенная чувствительность";
     
-    /**
-     * Проверяет, может ли стоматолог с указанной специализацией лечить указанное заболевание
-     * 
-     * @param specialization специализация стоматолога
-     * @param disease заболевание
-     * @return true если может лечить, false в противном случае
-     */
     public static boolean canTreat(String specialization, String disease) {
         switch (specialization) {
             case THERAPIST:

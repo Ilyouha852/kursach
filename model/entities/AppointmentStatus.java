@@ -1,4 +1,4 @@
-package model;
+package model.entities;
 
 public enum AppointmentStatus {
     PLANNED("Запланировано"),
@@ -13,6 +13,10 @@ public enum AppointmentStatus {
 
     @Override
     public String toString() {
+        return displayName;
+    }
+
+    public String getDisplayName() {
         return displayName;
     }
 

@@ -1,7 +1,7 @@
 package controller;
 
 import data.repository.MedicalRecordRepository;
-import model.MedicalRecord;
+import model.entities.MedicalRecord;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package model;
+package model.entities;
 
 public enum PatientDisease {
     CARIES("Кариес"),
@@ -23,11 +23,6 @@ public enum PatientDisease {
         return displayName;
     }
 
-    /**
-     * Получить заболевание по его отображаемому названию
-     * @param displayName отображаемое название заболевания
-     * @return соответствующее значение enum или null, если не найдено
-     */
     public static PatientDisease fromDisplayName(String displayName) {
         for (PatientDisease disease : values()) {
             if (disease.displayName.equals(displayName)) {

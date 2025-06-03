@@ -13,13 +13,10 @@ public class PostgreSQLDatabase {
     private static final String PASSWORD = "798551432005";
 
     private PostgreSQLDatabase() {
-        // Инициализация соединения будет происходить при первом запросе
         try {
             initializeConnection();
         } catch (SQLException e) {
             System.err.println("Error initializing database connection: " + e.getMessage());
-            // В зависимости от требований, здесь можно выбросить RuntimeException или обработать ошибку иным способом
-            // e.printStackTrace();
         }
     }
 
@@ -38,10 +35,7 @@ public class PostgreSQLDatabase {
     }
 
     public Connection getConnection() throws SQLException {
-        // Убираем повторную проверку и инициализацию здесь
         if (connection == null || connection.isClosed()) {
-             // Это условие должно быть редко достижимо после инициализации в конструкторе
-             // Но оставим его на случай неожиданного закрытия соединения
              initializeConnection();
         }
         return connection;

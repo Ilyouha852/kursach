@@ -1,4 +1,4 @@
-package model;
+package model.entities;
 
 public class Doctor {
 
@@ -21,7 +21,6 @@ public class Doctor {
         this.email = email;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }

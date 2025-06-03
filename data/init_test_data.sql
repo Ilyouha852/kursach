@@ -1,15 +1,12 @@
--- Очистка существующих данных
 DELETE FROM appointments;
 DELETE FROM patients;
 DELETE FROM doctors;
 
--- Сброс последовательностей
 ALTER SEQUENCE IF EXISTS patients_id_seq RESTART WITH 1;
 ALTER SEQUENCE IF EXISTS doctors_id_seq RESTART WITH 1;
 ALTER SEQUENCE IF EXISTS appointments_id_seq RESTART WITH 1;
 ALTER SEQUENCE IF EXISTS medical_records_id_seq RESTART WITH 1;
 
--- Вставка врачей
 INSERT INTO doctors (first_name, last_name, middle_name, specialization, phone_number, email) VALUES
 ('Александр', 'Иванов', 'Петрович', 'Терапевт', '+79123456789', 'ivanov@clinic.ru'),
 ('Елена', 'Смирнова', 'Александровна', 'Хирург', '+79234567890', 'smirnova@clinic.ru'),
@@ -27,7 +24,6 @@ INSERT INTO doctors (first_name, last_name, middle_name, specialization, phone_n
 ('Татьяна', 'Виноградова', 'Анатольевна', 'Детский стоматолог', '+79456789023', 'vinogradova@clinic.ru'),
 ('Павел', 'Богданов', 'Владимирович', 'Терапевт', '+79567890134', 'bogdanov@clinic.ru');
 
--- Вставка пациентов (примеры реалистичных ФИО)
 INSERT INTO patients (first_name, last_name, middle_name, date_of_birth, phone_number, address, disease, chronic_diseases, allergies, previous_diseases, hereditary_diseases) VALUES
 ('Иван', 'Сидоров', 'Александрович', '1990-05-15', '+79123456789', 'ул. Ленина, 10', 'Кариес', 'Гипертония', 'Пенициллин', '', 'Сахарный диабет'),
 ('Мария', 'Кузнецова', 'Ивановна', '1985-08-20', '+79234567890', 'пр. Мира, 25', 'Пульпит', '', 'Пыльца', '', ''),

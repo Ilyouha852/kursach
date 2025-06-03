@@ -1,7 +1,7 @@
 package data.repository;
 
 import data.db.PostgreSQLDatabase;
-import model.MedicalRecord;
+import model.entities.MedicalRecord;
 
 import java.sql.*;
 import java.util.ArrayList;

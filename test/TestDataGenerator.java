@@ -3,11 +3,11 @@ package test;
 import controller.AppointmentController;
 import controller.DoctorController;
 import controller.PatientController;
-import model.Appointment;
-import model.AppointmentStatus;
-import model.Doctor;
-import model.Patient;
-import model.DentalSpecialty;
+import model.entities.Appointment;
+import model.entities.AppointmentStatus;
+import model.entities.DentalSpecialty;
+import model.entities.Doctor;
+import model.entities.Patient;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -104,8 +104,8 @@ public class TestDataGenerator {
                                 DentalSpecialty.PEDIATRIC_DENTIST};
         doctor.setSpecialization(specialties[random.nextInt(specialties.length)]);
 
-        doctor.setPhoneNumber("+79" + (100000000 + random.nextInt(900000000))); // Пример простого номера
-        doctor.setEmail("doctor" + random.nextInt(100) + "@example.com"); // Пример email
+        doctor.setPhoneNumber("+79" + (100000000 + random.nextInt(900000000)));
+        doctor.setEmail("doctor" + random.nextInt(100) + "@example.com");
 
         return doctor;
     }

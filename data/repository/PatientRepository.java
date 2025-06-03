@@ -1,7 +1,7 @@
 package data.repository;
 
 import data.db.PostgreSQLDatabase;
-import model.Patient;
+import model.entities.Patient;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -44,11 +44,9 @@ public class PatientRepository {
             System.err.println("Error retrieving patients: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (resultSet != null) resultSet.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -94,11 +92,9 @@ public class PatientRepository {
             System.err.println("Error retrieving patient with id " + id + ": " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (resultSet != null) resultSet.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -147,11 +143,9 @@ public class PatientRepository {
             System.err.println("Error saving patient: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (generatedKeys != null) generatedKeys.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -190,10 +184,8 @@ public class PatientRepository {
             System.err.println("Error updating patient: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -219,10 +211,8 @@ public class PatientRepository {
             System.err.println("Error deleting patient: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();
@@ -265,11 +255,9 @@ public class PatientRepository {
             System.err.println("Error finding patient by phone: " + e.getMessage());
             e.printStackTrace();
         } finally {
-            // Не закрываем соединение здесь
             try {
                 if (resultSet != null) resultSet.close();
                 if (statement != null) statement.close();
-                // Не закрываем connection
             } catch (SQLException e) {
                 System.err.println("Error closing resources: " + e.getMessage());
                 e.printStackTrace();

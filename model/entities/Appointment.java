@@ -1,4 +1,4 @@
-package model;
+package model.entities;
 
 import java.util.Date;
 
@@ -7,9 +7,9 @@ public class Appointment {
     private int id;
     private Date appointmentDateTime;
     private String procedureType;
-    private String status; // "planned", "completed", "cancelled"
-    private int patientId; // Foreign key to Patient
-    private int doctorId; // Foreign key to Doctor
+    private String status;
+    private int patientId;
+    private int doctorId;
 
     public Appointment() {}
 
@@ -21,7 +21,6 @@ public class Appointment {
         this.doctorId = doctorId;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }
