@@ -148,7 +148,8 @@
 Таблица 1.1 – Описание таблиц БД
 
 <table><tr><th colspan="1"><b>Имя таблицы</b></th><th colspan="1"><b>Имя атрибута</b></th><th colspan="1"><b>Тип</b></th><th colspan="1"><b>Размер</b></th><th colspan="1"><b>Описание</b></th></tr>
-<tr><td colspan="1" rowspan="12">patients</td><td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор пациента</p><p>Ключевое поле</p></td></tr>
+<tr><td colspan="1" rowspan="12">patients</td></tr>
+<td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор пациента</p><p>Ключевое поле</p></td></tr>
 <tr><td colspan="1">last_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Фамилия пациента</td></tr>
 <tr><td colspan="1">first_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Имя пациента</td></tr>
 <tr><td colspan="1">middle_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Отчество пациента</td></tr>
@@ -160,14 +161,16 @@
 <tr><td colspan="1">allergies</td><td colspan="1">TEXT</td><td colspan="1">255 байт</td><td colspan="1">Аллергии пациента</td></tr>
 <tr><td colspan="1">previous_diseases</td><td colspan="1">TEXT</td><td colspan="1">255 байт</td><td colspan="1">Предыдущие заболевания пациента</td></tr>
 <tr><td colspan="1">hereditary_diseases</td><td colspan="1">TEXT</td><td colspan="1">255 байт</td><td colspan="1">Наследственные заболевания пациента</td></tr>
-<tr><td colspan="1" rowspan="6">doctors</td><td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор стоматолога</p><p>Ключевое поле</p></td></tr>
+<tr><td colspan="1" rowspan="6">doctors</td></tr>
+<td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор стоматолога</p><p>Ключевое поле</p></td></tr>
 <tr><td colspan="1">last_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Фамилия стоматолога</td></tr>
 <tr><td colspan="1">first_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Имя стоматолога</td></tr>
 <tr><td colspan="1">middle_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Отчество стоматолога</td></tr>
 <tr><td colspan="1">specialization</td><td colspan="1">VARCHAR</td><td colspan="1">100 байт</td><td colspan="1">Специализация стоматолога</td></tr>
 <tr><td colspan="1">phone_number</td><td colspan="1">VARCHAR</td><td colspan="1">15 байт</td><td colspan="1">Номер телефона врача</td></tr>
 <tr><th colspan="1">doctors</th><th colspan="1">email</th><th colspan="1">VARCHAR</th><th colspan="1">15 байт</th><th colspan="1">Email врача</th></tr>
-<tr><td colspan="1" rowspan="9">appointments </td><td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор записи</p><p>Ключевое поле</p></td></tr>
+<tr><td colspan="1" rowspan="9">appointments</td></tr>
+<td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор записи</p><p>Ключевое поле</p></td></tr>
 <tr><td colspan="1">appointment_date_time</td><td colspan="1">TIMESTAMP</td><td colspan="1">8 байт</td><td colspan="1">Дата и время приема</td></tr>
 <tr><td colspan="1">procedure_type</td><td colspan="1">VARCHAR</td><td colspan="1">200 байт</td><td colspan="1">Тип процедуры</td></tr>
 <tr><td colspan="1">status</td><td colspan="1">VARCHAR</td><td colspan="1">20 байт</td><td colspan="1">Статус записи</td></tr>
