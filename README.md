@@ -199,7 +199,7 @@
 На рисунке 2.1 представлена диаграмма таблиц базы данных.
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.001.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.001.png" alt=""/>
 </div>
 
 <div align="center">
@@ -304,11 +304,11 @@
    Графический интерфейс программы будет состоять из нескольких панелей. Панель управления пациентами встречает пользователя и предлагает главный функционал программы: работа с данными пациентов, врачей и записей на прием и создание отчетов с применением фильтров. Информационная архитектура приложения и легенда к ней представлены на рисунке 3. 
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.002.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.002.png" alt=""/>
 </div><div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.003.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.003.png" alt=""/>
 </div><div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.004.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.004.png" alt=""/>
 </div>
 
 <div align="center">
@@ -347,7 +347,7 @@
   На рисунке 3.2 изображен графический интерфейс панели управления пациентами.
 
   <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.005.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.005.png" alt=""/>
 </div>
 
   Рисунок 3.2 - Графический интерфейс панели управления пациентами.
@@ -443,7 +443,7 @@
   На рисунке 3.5 изображен графический интерфейс панели управления записями на прием c включенной фильтрацией.
 
   <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.007.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.007.png" alt=""/>
 </div>
 
   Рисунок 3.5 - Графический интерфейс панели управления записями на прием c включенной фильтрацией
@@ -475,7 +475,7 @@
   На рисунке 3.6 изображен графический интерфейс панели управления отчетами.
 
   <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.008.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.008.png" alt=""/>
 </div>
 
   Рисунок 3.6 - Графический интерфейс панели управления отчетами
@@ -577,7 +577,7 @@
   На рисунке 3.9 изображен графический интерфейс окна добавления/редактирования пациента.
 
   <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.010.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.010.png" alt=""/>
 </div>
 
   Рисунок 3.9 - Графический интерфейс окна добавления/редактирования пациента
@@ -671,7 +671,7 @@
 
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.011.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.011.png" alt=""/>
 </div>
 
 <a name="_toc136958805"></a>Рисунок 4.1 – Диаграмма архитектуры приложения
@@ -987,7 +987,7 @@
 На рисунках 6.1-6.14 представлены результаты тестирования.
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.012.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.012.png" alt=""/>
 </div>
 
 <div align="center">
@@ -995,7 +995,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.013.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.013.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1017,7 +1017,7 @@
 
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.015.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.015.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1039,7 +1039,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.017.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.017.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1049,7 +1049,7 @@
 
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.018.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.018.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1057,7 +1057,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.019.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.019.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1067,7 +1067,7 @@
 
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.020.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.020.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1075,7 +1075,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.021.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.021.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1085,7 +1085,7 @@
 
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.022.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.022.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1093,7 +1093,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.023.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.023.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1101,7 +1101,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.024.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.024.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1109,7 +1109,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.025.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.025.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1117,7 +1117,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.026.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.026.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1125,7 +1125,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.027.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.027.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1133,7 +1133,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.028.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.028.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1141,7 +1141,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.029.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.029.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1149,7 +1149,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.030.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.030.png" alt=""/>
 </div>
 
 <div align="center">
@@ -1157,7 +1157,7 @@
 </div>
 
 <div align="center">
-<img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.031.png" alt=""/>
+<img src="images/Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.031.png" alt=""/>
 </div>
 
 <div align="center">
