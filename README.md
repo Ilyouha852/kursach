@@ -27,13 +27,13 @@
   **Проблема:** Стоматологическая клиника сталкивается с необходимостью:
 
 1. Ведения учета пациентов с их медицинской историей.
-1. Управления штатом врачей с учетом их специализаций и квалификации.
-1. Организации записей на прием с учетом:
+2. Управления штатом врачей с учетом их специализаций и квалификации.
+3. Организации записей на прием с учетом:
 - Специализации врача и типа процедуры.
 - Доступного времени врача.
 - Медицинских противопоказаний пациента.
 - Статуса приема (запланирован, выполнен, отменен).
-1. Формирования отчетности по работе клиники.
+4. Формирования отчетности по работе клиники.
 
 **Функциональные требования:**
 
@@ -52,7 +52,7 @@
   - Редактирование данных пациента.
   - Удаление пациента из системы.
   - Просмотр полной медицинской истории.
-1. **Управление данными врачей**
+2. **Управление данными врачей**
 - **Хранение информации о врачах:**
   - ФИО.
   - Специализация (стоматолог-терапевт, хирург, ортодонт и т.д.)
@@ -62,7 +62,7 @@
   - Редактирование данных врача.
   - Удаление врача из системы.
   - Просмотр расписания врача.
-1. **Управление записями на прием**
+3. **Управление записями на прием**
 - **Создание и управление записями:**
   - **Создание новой записи с выбором:**
     - Пациента.
@@ -78,7 +78,7 @@
     - По дате.
     - По типу процедуры.
     - По статусу.
-1. **Формирование отчетности**
+4. **Формирование отчетности**
 - **Генерация отчетов:**
   - По врачам.
   - По пациентам.
@@ -86,7 +86,7 @@
 - **Экспорт отчетов:**
   - В формате TXT.
   - Возможность выбора периода, конкретного врача/пациента для отчета.
-1. **Валидация данных**
+5. **Валидация данных**
 - **Проверка корректности вводимых данных:**
   - Обязательные поля.
   - Формат даты и времени.
@@ -96,7 +96,7 @@
   - Проверка доступности врача в выбранное время.
   - Проверка соответствия специализации врача типу процедуры.
   - Проверка медицинских противопоказаний пациента.
-1. **Поиск и фильтрация**
+6. **Поиск и фильтрация**
 - **Гибкие фильтры для всех сущностей:**
   - Поиск пациентов по ФИО, телефону.
   - Поиск врачей по ФИО, специализации.
@@ -106,7 +106,7 @@
   - По ФИО.
   - По статусу.
   - По типу процедуры.
-1. **Интерфейс пользователя**
+7. **Интерфейс пользователя**
 - **Главное окно с вкладками:**
   - Пациенты.
   - Врачи.
@@ -121,25 +121,25 @@
   - Фильтрации.
   - Редактирования.
   - Удаления записей.
-1. **Обработка ошибок**
+8. **Обработка ошибок**
 - **Обработка и отображение ошибок:**
   - Ошибки валидации данных.
   - Ошибки доступа к базе данных.
   - Ошибки бизнес-логики.
   - Логирование ошибок для последующего анализа.
-1. **Безопасность**
+9. **Безопасность**
 - **Защита данных:**
   - Валидация вводимых данных.
   - Проверка прав доступа.
   - Защита от SQL-инъекций.
   - Резервное копирование данных.
-1. **Интеграция с базой данных**
+10. **Интеграция с базой данных**
 - **Работа с PostgreSQL:**
   - Создание и обновление записей.
   - Выполнение сложных запросов.
   - Транзакционность операций.
   - Оптимизация запросов для быстрой работы с большими объемами данных.**
-#**<div align="center">
+**<div align="center">
   <a name="_toc1142"></a><a name="_toc200205033"></a>2 Проектирование базы данных**
 </div>
 В ходе разработки приложения "Стоматологическая клиника" для автоматизации рутинных процессов работы стоматологи была реализована база данных на PostgreSQL. Описание таблиц БД представлено в таблице 1.1.
@@ -165,11 +165,7 @@
 <tr><td colspan="1">middle_name</td><td colspan="1">VARCHAR</td><td colspan="1">50 байт</td><td colspan="1">Отчество стоматолога</td></tr>
 <tr><td colspan="1">specialization</td><td colspan="1">VARCHAR</td><td colspan="1">100 байт</td><td colspan="1">Специализация стоматолога</td></tr>
 <tr><td colspan="1">phone_number</td><td colspan="1">VARCHAR</td><td colspan="1">15 байт</td><td colspan="1">Номер телефона врача</td></tr>
-</table>
-
-Продолжение таблицы 1.1 – Описание таблиц БД
-
-<table><tr><th colspan="1">doctors</th><th colspan="1">email</th><th colspan="1">VARCHAR</th><th colspan="1">15 байт</th><th colspan="1">Email врача</th></tr>
+<tr><th colspan="1">doctors</th><th colspan="1">email</th><th colspan="1">VARCHAR</th><th colspan="1">15 байт</th><th colspan="1">Email врача</th></tr>
 <tr><td colspan="1" rowspan="9">appointments </td><td colspan="1">id</td><td colspan="1">INTEGER</td><td colspan="1">4 байта</td><td colspan="1"><p>Идентификатор записи</p><p>Ключевое поле</p></td></tr>
 <tr><td colspan="1">appointment_date_time</td><td colspan="1">TIMESTAMP</td><td colspan="1">8 байт</td><td colspan="1">Дата и время приема</td></tr>
 <tr><td colspan="1">procedure_type</td><td colspan="1">VARCHAR</td><td colspan="1">200 байт</td><td colspan="1">Тип процедуры</td></tr>
@@ -191,144 +187,102 @@
 Рисунок 2.1 – Диаграмма таблиц БД
 </div>
 
-**SQL-запросы к БД:**
+## SQL-запросы к БД:
 
-Класс PatientRepository:
+### Класс PatientRepository:
 
 1. Получение всех пациентов:
 
-   SELECT id, first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, 
-
-   `       `disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases 
-
+   SELECT id, first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases 
    FROM patients
 
-1. Получение пациента по ID:
+2. Получение пациента по ID:
 
-   SELECT id, first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, 
-
-   `       `disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases 
-
+   SELECT id, first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases 
    FROM patients 
-
    WHERE id = ?
 
-1. Добавление нового пациента:
+3. Добавление нового пациента:
 
-   INSERT INTO patients (first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, 
-
-   `                     `disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases) 
-
+   INSERT INTO patients (first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases) 
    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
-
    RETURNING id
 
-1. Удаление пациента:
+4. Удаление пациента:
 
    DELETE FROM patients 
-
    WHERE id = ?
 
-1. Поиск пациента по телефону:
+5. Поиск пациента по телефону:
 
-   SELECT id, first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, 
-
-   `       `disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases 
-
+   SELECT id, first\_name, last\_name, middle\_name, date\_of\_birth, phone\_number, address, disease, chronic\_diseases, allergies, previous\_diseases, hereditary\_diseases 
    FROM patients 
-
    WHERE phone\_number = ?
 
-   Класс DoctorRepository:
+### Класс DoctorRepository:
 
 1. Получение всех врачей:
 
    SELECT id, first\_name, last\_name, middle\_name, specialization, phone\_number, email 
-
    FROM doctors
 
-1. Получение врача по ID:
+2. Получение врача по ID:
 
    SELECT id, first\_name, last\_name, middle\_name, specialization, phone\_number, email 
-
    FROM doctors 
-
    WHERE id = ?
 
-1. Поиск врача по email:
+3. Поиск врача по email:
 
    SELECT id, first\_name, last\_name, middle\_name, specialization, phone\_number, email 
-
    FROM doctors 
-
    WHERE email = ?
 
-1. Добавление нового врача:
+4. Добавление нового врача:
 
    INSERT INTO doctors (first\_name, last\_name, middle\_name, specialization, phone\_number, email) 
-
    VALUES (?, ?, ?, ?, ?, ?) 
-
    RETURNING id
 
-1. Удаление врача:
+5. Удаление врача:
 
    DELETE FROM doctors 
-
    WHERE id = ?
 
-   Класс AppointmentRepository:
+### Класс AppointmentRepository:
 
 1. Получение всех записей на прием:
 
-   SELECT id, appointment\_date\_time, procedure\_type, status, patient\_id, doctor\_id, 
-
-   `       `diagnosis, procedures\_performed, notes 
-
+   SELECT id, appointment\_date\_time, procedure\_type, status, patient\_id, doctor\_id, diagnosis, procedures\_performed, notes 
    FROM appointments
 
-1. <a name="_toc18912"></a>Получение записи на прием по ID:
+2. <a name="_toc18912"></a>Получение записи на прием по ID:
 
-   SELECT id, appointment\_date\_time, procedure\_type, status, patient\_id, doctor\_id, 
-
-   `       `diagnosis, procedures\_performed, notes 
-
+   SELECT id, appointment\_date\_time, procedure\_type, status, patient\_id, doctor\_id, diagnosis, procedures\_performed, notes 
    FROM appointments 
-
    WHERE id = ?
 
-1. Добавление новой записи на прием:
+3. Добавление новой записи на прием:
 
-   INSERT INTO appointments (appointment\_date\_time, procedure\_type, status, patient\_id, doctor\_id, 
-
-   `                         `diagnosis, procedures\_performed, notes) 
-
+   INSERT INTO appointments (appointment\_date\_time, procedure\_type, status, patient\_id, doctor\_id, diagnosis, procedures\_performed, notes) 
    VALUES (?, ?, ?, ?, ?, ?, ?, ?) 
-
    RETURNING id
 
-1. Удаление записи на прием:
+4. Удаление записи на прием:
 
    DELETE FROM appointments 
-
    WHERE id = ?
 
-1. Поиск записей на прием по врачу и дате:
+5. Поиск записей на прием по врачу и дате:
 
    SELECT \* FROM appointments 
-
    WHERE doctor\_id = ? AND DATE(appointment\_date\_time) = DATE(?)
    **\
 
-
-   <a name="_toc200205034"></a>**3 Проектирование графического интерфейса**
-
+**<div align="center">
+   <a name="_toc200205034"></a>3 Проектирование графического интерфейса**
+</div>
    Графический интерфейс программы будет состоять из нескольких панелей. Панель управления пациентами встречает пользователя и предлагает главный функционал программы: работа с данными пациентов, врачей и записей на прием и создание отчетов с применением фильтров. Информационная архитектура приложения и легенда к ней представлены на рисунке 3. 
-
-
-47
-
-
 
 <div align="center">
 <img src="Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.002.png" alt=""/>
@@ -379,9 +333,9 @@
 
   Рисунок 3.2 - Графический интерфейс панели управления пациентами.
 
-  Описание:
+  **Описание:**
 
-  Панель управления врачами
+  **Панель управления врачами**
 
   1\. Верхняя часть. В верхней части окна расположен компонент с вкладками (JTabbedPane), содержащий четыре вкладки: 
 
@@ -610,9 +564,9 @@
   Рисунок 3.9 - Графический интерфейс окна добавления/редактирования пациента
 
 
-
-  <a name="_toc200205035"></a>**4 Проектирование классов**
-
+**<div align="center">
+  <a name="_toc200205035"></a>4 Проектирование классов**
+</div>
   Приложение построено по многослойной архитектуре с четким разделением ответственности между компонентами. Диаграмма архитектуры приложения представлена на рисунке 4.1
 
   Основные слои включают:
@@ -638,7 +592,8 @@
 - AppointmentFilterPanel - панель фильтрации записей.
 - ReportFilterPanel - панель фильтрации отчетов.
 - ReportDisplayPanel - панель отображения отчетов.
-1. Слой контроллеров (пакет controller):
+
+2. Слой контроллеров (пакет controller):
 
    Реализует бизнес-логику приложения. Зависит от слоев model и data. Слой контроллеров включает:
 
@@ -655,7 +610,8 @@
   - Проверка доступности времени.
   - Валидация данных записей.
   - Обработка ошибок.
-1. Слой моделей (пакет model):
+
+3. Слой моделей (пакет model):
 
    Содержит бизнес-сущности и правила. Не зависит от других слоев. Слой моделей включает:
 
@@ -668,7 +624,8 @@
   - PatientTableModel - модель таблицы пациентов.
   - DoctorTableModel - модель таблицы врачей.
   - AppointmentTableModel - модель таблицы записей.
-1. Слой доступа к данным (пакет data):
+
+4. Слой доступа к данным (пакет data):
 
 Отвечает за хранение и получение данных. Зависит только от слоя model. Слой доступа к данным включает:
 
@@ -680,7 +637,8 @@
   - PostgreSQLDatabase - класс для работы с базой данных.
   - SQL-запросы и их выполнение.
   - Управление соединениями.
-1. Слой утилит (пакет util):
+
+5. Слой утилит (пакет util):
 
 Содержит вспомогательные классы. Может использоваться всеми слоями. Слой утилит включает:
 
@@ -916,12 +874,6 @@
 | :- | :- | :- | :- | :- |
 |1|startDate|Дата начала отчетного периода|Date|-|
 |2|endDate|Дата окончания отчетного периода|Date||
-
-
-Продолжение таблицы 4.2.3 - Спецификации переменных метода generateClinicReport(Date startDate, Date endDate, Doctor doctor, Patient patient)
-
-|**№**|**Название переменной**|**Назначение переменной**|**Тип**|**Доступ** |
-| :- | :- | :- | :- | :- |
 |3|doctor|Врач, по которому фильтруется отчет (возможен null)|Doctor|-|
 |4|patient|Пациент, по которому фильтруется отчет (возможен null)|Patient||
 |5|reportContent|Объект для накопления текста отчета|StringBuilder||
@@ -932,10 +884,6 @@
 |10|dateFormat|Форматтер для отображения даты и времени|SimpleDateFormat||
 |11|appointmentPatient|Пациент, связанный с конкретной записью на прием|Patient||
 |12|appointmentDoctor|Врач, связанный с конкретной записью на прием|Doctor||
-
-
-Продолжение таблицы 4.2.3 - Спецификации переменных метода generateClinicReport(Date startDate, Date endDate, Doctor doctor, Patient patient)
-
 |13|statusStats|Словарь со статистикой по статусам приемов (ключ — статус, значение — количество)|Map<String, Long>||
 | :- | :- | :- | :- | :- |
 **4.2.3. Класс ValidationUtils**
@@ -992,8 +940,9 @@
 |2|calendar|Объект календаря для извлечения часов и минут|Calendar|public|
 |3|hour|Час из даты/времени|int|public|
 |4|minute|Минута из даты/времени|int|public|
-<div align="center">
-# <a name="_toc200205038"></a>**5 Проектирование тестов**
+
+**<div align="center">
+  <a name="_toc200205038"></a>5 Проектирование тестов**
 </div>
 На основе функциональных требований были реализованы тесты, представленные в таблице 5.1.
 
@@ -1203,8 +1152,8 @@
 Исходный код опубликован на платформе GitHub. Для просмотра исходного кода необходимо перейти по ссылке: https://github.com/Ilyouha852/kursach
 
 
-<div align="center">
-# <a name="_toc200205041"></a>**Заключение**
+**<div align="center">
+  <a name="_toc200205041"></a>Заключение**
 </div>
 В ходе выполнения курсового проекта разработана программа "Стоматологическая клиника" для автоматизации рутинных процессов работы стоматологической клиники. Приложение создано на языке Java с использованием инструментов разработки, включая IntelliJ IDEA, Visual Studio Code, библиотек Swing и AWT для графического интерфейса, а также PostgreSQL для хранения данных. В процессе работы создано приложение с графическим интерфейсом, включающим панели управления пациентами, врачами, записями на прием, отчетами.
 
@@ -1232,12 +1181,12 @@
 Все поставленные задачи выполнены, цель работы достигнута.
 
 
-<div align="center">
-# <a name="_toc200205042"></a>**Список использованных источников**
+**<div align="center">
+  <a name="_toc200205042"></a>Список использованных источников**
 </div>
 1. Фримен Э. Head First. Паттерны проектирования. Обновленное юбилейное издание. – СПб.: Питер, 2018. – 656 с. 
-1. ` `Аршинский В.Л. Объектно-ориентированное программирование. Методические указания по курсовому проекту. — Иркутск: Изд-во ИРНИТУ, 2018. — 13 с.
-1. Эккель Б. Философия Java. 4-е полное изд. — СПб.: Питер, 2018. — 1168 с.
+2. Аршинский В.Л. Объектно-ориентированное программирование. Методические указания по курсовому проекту. — Иркутск: Изд-во ИРНИТУ, 2018. — 13 с.
+3. Эккель Б. Философия Java. 4-е полное изд. — СПб.: Питер, 2018. — 1168 с.
 
 
 [ref1]: Aspose.Words.aa480bab-2396-4c56-82c0-21e270a5f973.006.png
